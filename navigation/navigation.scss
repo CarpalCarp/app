@@ -1,0 +1,31 @@
+.top-banner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+h1.logo {
+  background-image: url(../images/Nebo_Logo_Color.jpg);
+  background-repeat: no-repeat;
+  width: 260px;
+  height: 140px;
+  background-position: center;
+  background-size: contain;
+  text-indent: -10000px;
+  overflow: hidden;
+  display: block;
+  margin: 0 0px;
+}
+
+#phone-location {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+}
+
+#phone-location div {
+  margin: 6px 0 6px 0;
+}
