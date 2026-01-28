@@ -40,15 +40,17 @@ h1.logo {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
+  /* 1. Move the start of the line to the middle */
+  transform: translateX(-50%);
+  /* 2. Shift it back by half its own width */
+  width: 4rem;
+  /* Keep your preferred width */
   height: 2px;
   background-color: black;
   transition: all 0.3s ease;
 }
 
 .nav-link.active::after {
-  width: 80%;
+  width: 4rem;
   /* or 100% */
-  left: 10%;
-  /* center it */
 }
