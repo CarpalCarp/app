@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1180px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -52,5 +51,14 @@ h1.logo {
 
 .nav-link.active::after {
   width: 4rem;
-  /* or 100% */
+}
+
+.top-banner-wrapper {
+  background-image: url('../images/header_background_image.jpg');
+  background-size: cover; // ← this enlarges & fills without stretch
+  background-position: center; // centers so important parts aren't cropped oddly
+  background-repeat: no-repeat; // important!
+  min-height: 180px; // or whatever fits your content + some breathing room
+  width: 100%; // ensure full width (usually not needed but safe)
+  position: relative; // for overlay if needed
 }
