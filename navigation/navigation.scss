@@ -9,24 +9,41 @@
 h1.logo {
   background-image: url(../images/Nebo_Logo_Color.jpg);
   background-repeat: no-repeat;
-  width: 260px;
-  height: 140px;
   background-position: center;
   background-size: contain;
-  text-indent: -10000px;
+  width: 260px;
+  height: 140px;
+  text-indent: -9999px; // better value than -10000px (avoids minor issues)
   overflow: hidden;
   display: block;
-  margin: 0 0px;
+  margin: 0;
+  transition: transform 0.3s ease, filter 0.3s ease; // smooth hover
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+h1.logo:hover,
+h1.logo:focus {
+  transform: scale(1.05); // gentle grow on hover — feels interactive
+  filter: brightness(1.05); // subtle lift
 }
 
 #phone-location {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5em;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px); // frosted glass effect (optional but nice)
+  -webkit-backdrop-filter: blur(8px); // Safari support
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
+/* Ensure text is readable – force dark text if background is light */
 #phone-location div {
-  margin: 6px 0 6px 0;
+  color: #212529;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
